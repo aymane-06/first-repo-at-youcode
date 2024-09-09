@@ -2,11 +2,7 @@
 #include <string.h>
 #include "fonction.h"
 
-int n;
-int prix[50];
-int quantite[50];
-char titre[50][50],auteur[50][50];
-int i;
+
 void ajoute(){
 
     printf("entre la quantite du livre vous voule ajoute: ");

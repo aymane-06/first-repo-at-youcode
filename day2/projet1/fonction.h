@@ -1,3 +1,8 @@
+int n;
+int prix[50];
+int quantite[50];
+char titre[50][50],auteur[50][50];
+int i;
 void ajoute();
 void afficher();
 void MAJQ();
