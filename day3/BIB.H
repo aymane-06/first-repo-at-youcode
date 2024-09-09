@@ -1,9 +1,0 @@
-char nom[50][50];
-char phoneNum[50][13];
-char email[50][50];
-int n;
-void AddContact();
-void updateContact();
-void deletContact();
-void showContact();
-void serch();

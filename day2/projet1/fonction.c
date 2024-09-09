@@ -5,20 +5,32 @@
 
 void ajoute(){
 
-    printf("entre la quantite du livre vous voule ajoute: ");
-    scanf("%d",&n);
-    for(int i=0;i<n;i++){
-        printf("entre le titre du livre: ");
-        scanf("%s",&titre[i]);
-        printf("entre le auteur du livre: ");
-        scanf("%s",&auteur[i]);
-        printf("entre le prix du livre: ");
-        scanf("%d",&prix[i]);
-        printf("entre la quantité du livre: ");
-        scanf("%d",&quantite[i]);
+addbook:
         printf("=============================\n");
+        printf("entre le titre du livre: ");
+        scanf("%s",&titre[n]);
+        printf("entre le auteur du livre: ");
+        scanf("%s",&auteur[n]);
+        printf("entre le prix du livre: ");
+        scanf("%d",&prix[n]);
+        printf("entre la quantité du livre: ");
+        scanf("%d",&quantite[n]);
+        n++;
+        if(n>50){
+            printf("le stock est plein!!!");
+        }
+        int c;
+        printf("vous voullez ajouté un autre livre?\n1. oui/ 0. non:");
+        scanf("%d",&c);
+
+        if(c==1){
+            goto addbook;
+        }else{
+            return;
+        }
+
     }
-}
+
 void afficher(){
     int i ;
     if (n==0){

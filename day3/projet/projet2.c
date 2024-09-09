@@ -6,28 +6,33 @@
 char nom[50][50];
 char phoneNum[50][13];
 char email[50][50];
-int n;
+int n=0;
 
 
 void AddContact(){
-    printf("combien de contact vous voullez ajoute: ");
-    scanf("%d",&n);
-     if(n>50 && n<0){
-         printf("le maximum du contact vous pouvez ajoute est 50!!!\n");
-     }else{
-        for(int i=0;i<n;i++){
+        addbook:
             printf("<==========================>\n");
             printf("entre le nom du contact: ");
-            scanf("%s",&nom[i]);
+            scanf("%s",&nom[n]);
             printf("entre le numero de telephone du contact:");
-            scanf("%s",&phoneNum[i]);
+            scanf("%s",&phoneNum[n]);
             printf("entre l addresse e-mail: ");
-            scanf("%s",&email[i]);
-        }
-        
+            scanf("%s",&email[n]);
+            n++;
+             if(n>50)
+        {
+            printf("le stock est plein");}
+            int c;
+        printf("vous voulez ajoute un autre livre? 1.oui/0.non");
+        scanf("%d",&c);
+            if(c==1) {
+            goto addbook;
+        }else
+        return;
+
      }
-    
-}
+
+
 void updateContact(){
     char c[50];
     printf("entre le nom du conatct: ");
@@ -84,7 +89,7 @@ void serch(){
 }
 
 int main() {
-do{ 
+do{
     int choix;
  printf("1. Ajouter un Contact\n2. Modifier un Contact\n3. Supprimer un Contact\n4. Afficher Tous les Contacts\n5. Rechercher un Contact\n0. quiter\nmerci de choisir le numero corespondent a votre choix: ");
  scanf("%d",&choix);
@@ -106,12 +111,12 @@ do{
         break;
     case 0:
        return 0;
-        break;    
+        break;
     default:
        printf("!!!!choix invalide!!!!\n");
-        
-     
-     
+
+
+
  }
 }while (1);
 

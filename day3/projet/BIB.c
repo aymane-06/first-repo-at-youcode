@@ -2,26 +2,29 @@
 #include <string.h>
 #include "BIB.h"
 
-
 void AddContact(){
-    printf("combien de contact vous voullez ajoute: ");
-    scanf("%d",&n);
-     if(n>50 && n<0){
-         printf("le maximum du contact vous pouvez ajoute est 50!!!\n");
-     }else{
-        for(int i=0;i<n;i++){
+        addbook:
             printf("<==========================>\n");
             printf("entre le nom du contact: ");
-            scanf("%s",&nom[i]);
+            scanf("%s",&nom[n]);
             printf("entre le numero de telephone du contact:");
-            scanf("%s",&phoneNum[i]);
+            scanf("%s",&phoneNum[n]);
             printf("entre l addresse e-mail: ");
-            scanf("%s",&email[i]);
-        }
+            scanf("%s",&email[n]);
+            n++;
+             if(n>50)
+        {
+            printf("le stock est plein");}
+            int c;
+        printf("vous voulez ajoute un autre livre? 1.oui/0.non");
+        scanf("%d",&c);
+            if(c==1) {
+            goto addbook;
+        }else{
+        return;}
 
      }
 
-}
 void updateContact(){
     char c[50];
     printf("entre le nom du conatct: ");
