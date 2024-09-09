@@ -16,7 +16,7 @@ void AddContact(){
         {
             printf("le stock est plein");}
             int c;
-        printf("vous voulez ajoute un autre livre? 1.oui/0.non");
+        printf("vous voulez ajoute un autre contact? 1.oui/0.non");
         scanf("%d",&c);
             if(c==1) {
             goto addbook;
