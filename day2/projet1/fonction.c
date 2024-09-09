@@ -66,7 +66,7 @@ int index;
 printf("entre le titre de livre pour le supprimer: ");
 scanf("%s",&recherch);
 for(int i=0;i<n;i++){
-        if(strcmp(recherch,titre[i]) == 0)
+        if(strcasecmp(recherch,titre[i]) == 0)
 
                    while(i<n){
             strcpy(titre[i],titre[i+1]);
