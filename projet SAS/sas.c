@@ -22,30 +22,6 @@ void tolowercases(char *str)
 int student_conter;
 struct students student[Max_students];
 
-<<<<<<< HEAD
-void addstudent(){
-        student_conter=0;
-        newstudent:
-        if(student_conter>Max_students){
-            printf("le stock est plein!!!");
-            return;
-        }
-        printf("<==========================>\n");
-        student[student_conter].id=student_conter+1;
-        printf("Entrez le nom de l etudiant: ");
-        scanf("%s",student[student_conter].nom);
-        printf("Entrez le prenom de l etudiant: ");
-        scanf("%s",student[student_conter].prenom);
-
-    departement:
-        printf("Entrez le departement de l etudiant:\n(1. Mathematique / 2. Phisique / 3. Informatique / 4. Economie): ");
-        int c;
-        char info[10]="informatique";
-        scanf("%d",&c);
-        switch (c){
-    case 1:
-        strcpy(student[student_conter].departement,"mathematique");
-=======
 void addstudent()
 {
   student_conter = 0;
@@ -153,7 +129,6 @@ Remodifier:
       {
       case 1:
         strcpy(student[i].departement, "mathematique");
->>>>>>> b886d1da8caefcbd6b66c8c9371b8cb44eb37278
         break;
       case 2:
 
@@ -161,12 +136,7 @@ Remodifier:
         break;
       case 3:
 
-<<<<<<< HEAD
-
-        strcpy(student[student_conter].departement,info[10]);
-=======
         strcpy(student[i].departement, "informatique");
->>>>>>> b886d1da8caefcbd6b66c8c9371b8cb44eb37278
         break;
       case 4:
 
@@ -175,31 +145,10 @@ Remodifier:
       default:
         printf("choisir un nombre entre 1-4");
         goto departement;
-<<<<<<< HEAD
-        }
-        printf("Entrez la date de naissance de l etudiant: ");
-        scanf("%s",student[student_conter].datenaissance);
-        printf("Entrez la Note Generale de l Etudiant: ");
-        scanf("%f",&student[student_conter].noteg);
-        student_conter++;
-        printf("Vous Voullez Ajoute un Autre etudient ?(1. oui/0.non)");
-        scanf("%d",&c);
-        if(c==1){
-            goto newstudent;
-        }
-        else{
-            return;
-        }
-}
-void showstudent(){
-    if(student_conter==0){
-        printf("\nAucun Etudient a Afficher!!!!\n ");
-=======
       }
       printf("Entrez la Note Generale de l Etudiant: ");
       scanf("%f", &student[i].noteg);
       printf("\nLa Modification est bien fait!!\n");
->>>>>>> b886d1da8caefcbd6b66c8c9371b8cb44eb37278
     }
     if (serchID != student[i].id)
     {
