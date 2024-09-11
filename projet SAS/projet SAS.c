@@ -26,11 +26,11 @@ void addstudent(){
         scanf("%s",student[student_conter].nom);
         printf("Entrez le prenom de l etudiant: ");
         scanf("%s",student[student_conter].prenom);
-        printf("Entrez la date de naissance de l etudiant: ");
-        scanf("%s",student[student_conter].datenaissance);
+
     departement:
         printf("Entrez le departement de l etudiant:\n(1. Mathematique / 2. Phisique / 3. Informatique / 4. Economie): ");
         int c;
+        char info[10]="informatique";
         scanf("%d",&c);
         switch (c){
     case 1:
@@ -42,7 +42,8 @@ void addstudent(){
         break;
     case 3:
 
-        strcpy(student[student_conter].departement,"informatique\n");
+
+        strcpy(student[student_conter].departement,info[10]);
         break;
     case 4:
 
@@ -52,6 +53,8 @@ void addstudent(){
         printf("choisir un nombre entre 1-4");
         goto departement;
         }
+        printf("Entrez la date de naissance de l etudiant: ");
+        scanf("%s",student[student_conter].datenaissance);
         printf("Entrez la Note Generale de l Etudiant: ");
         scanf("%f",&student[student_conter].noteg);
         student_conter++;
